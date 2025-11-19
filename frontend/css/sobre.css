@@ -1,0 +1,218 @@
+/* Página Sobre - Premium */
+.page-header {
+    padding: 120px 0 80px;
+    text-align: center;
+    background: linear-gradient(135deg, rgba(0, 27, 58, 0.1), rgba(167, 145, 73, 0.1)),
+                url('https://images.unsplash.com/photo-1582407947304-fd86f028f716?w=1920&q=90') center/cover;
+    background-attachment: fixed;
+    position: relative;
+}
+
+.page-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.85);
+    z-index: 0;
+}
+
+.page-header > * {
+    position: relative;
+    z-index: 1;
+}
+
+.about-content {
+    padding: 100px 0;
+    background: var(--white);
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 40px;
+    margin-bottom: 80px;
+}
+
+.about-card {
+    background: var(--white);
+    padding: 50px;
+    border-radius: 20px;
+    box-shadow: var(--shadow-md);
+    border: 1px solid var(--border-light);
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+}
+
+.about-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--blue-premium), var(--gold-premium));
+    transform: scaleX(0);
+    transition: var(--transition);
+}
+
+.about-card:hover::before {
+    transform: scaleX(1);
+}
+
+.about-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-lg);
+}
+
+.about-card h2 {
+    color: var(--blue-premium);
+    margin-bottom: 25px;
+    font-size: 1.8rem;
+    font-weight: 800;
+    text-align: center;
+}
+
+.about-card p {
+    color: var(--text-muted);
+    line-height: 1.8;
+    margin-bottom: 20px;
+    font-size: 1.05rem;
+}
+
+.about-card strong {
+    color: var(--text-dark);
+    font-weight: 600;
+}
+
+.company-info {
+    background: var(--white);
+    padding: 60px;
+    border-radius: 24px;
+    margin: 60px 0;
+    box-shadow: var(--shadow-lg);
+    border: 1px solid var(--border-light);
+}
+
+.company-info h2 {
+    text-align: center;
+    color: var(--blue-premium);
+    margin-bottom: 40px;
+    font-size: 2.5rem;
+    font-weight: 800;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.info-item {
+    background: var(--blue-light);
+    padding: 30px;
+    border-radius: 16px;
+    text-align: center;
+    border-left: 4px solid var(--gold-premium);
+    transition: var(--transition);
+}
+
+.info-item:hover {
+    background: var(--gold-light);
+    transform: translateX(5px);
+}
+
+.info-item strong {
+    color: var(--blue-premium);
+    display: block;
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.info-item {
+    color: var(--text-dark);
+    font-size: 1rem;
+}
+
+.garantia-puglia {
+    background: linear-gradient(135deg, var(--gold-light), var(--blue-light));
+    padding: 60px;
+    border-radius: 24px;
+    border: 2px solid var(--gold-premium);
+    text-align: center;
+    margin: 60px 0;
+    box-shadow: var(--shadow-lg);
+}
+
+.garantia-puglia h2 {
+    color: var(--blue-premium);
+    font-size: 2.5rem;
+    font-weight: 900;
+    margin-bottom: 25px;
+}
+
+.garantia-puglia p {
+    color: var(--text-dark);
+    font-size: 1.2rem;
+    line-height: 1.8;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Timeline */
+.timeline {
+    margin: 60px 0;
+    position: relative;
+}
+
+.timeline-item {
+    background: var(--white);
+    padding: 35px;
+    border-radius: 16px;
+    margin-bottom: 30px;
+    border-left: 4px solid var(--gold-premium);
+    box-shadow: var(--shadow-md);
+    transition: var(--transition);
+}
+
+.timeline-item:hover {
+    transform: translateX(8px);
+    box-shadow: var(--shadow-lg);
+}
+
+.timeline-item h3 {
+    color: var(--blue-premium);
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.timeline-item p {
+    color: var(--text-muted);
+    line-height: 1.7;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .info-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about-card {
+        padding: 35px 25px;
+    }
+
+    .company-info,
+    .garantia-puglia {
+        padding: 40px 25px;
+    }
+}

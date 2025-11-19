@@ -1,0 +1,334 @@
+/* ============================================
+   PÁGINAS DE SERVIÇOS INDIVIDUAIS - PREMIUM
+   ============================================ */
+
+.servico-header {
+    position: relative;
+    width: 100%;
+    height: 70vh;
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    overflow: hidden;
+}
+
+.servico-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.75));
+    z-index: 1;
+}
+
+.servico-header > * {
+    position: relative;
+    z-index: 2;
+}
+
+/* Imagens de fundo específicas por serviço */
+.pintura-residencial .servico-header {
+    background-image: url('https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=1920&q=90');
+}
+
+.pintura-comercial .servico-header {
+    background-image: url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1920&q=90');
+}
+
+.pintura-industrial .servico-header {
+    background-image: url('https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=1920&q=90');
+}
+
+.pintura-fachadas .servico-header {
+    background-image: url('https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=1920&q=90');
+}
+
+.pintura-pisos-epoxi .servico-header {
+    background-image: url('https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=1920&q=90');
+}
+
+.pintura-poliuretano .servico-header {
+    background-image: url('https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=1920&q=90');
+}
+
+.pintura-anticorrosiva .servico-header {
+    background-image: url('https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=1920&q=90');
+}
+
+.pintura-galpoes .servico-header {
+    background-image: url('https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=1920&q=90');
+}
+
+.pintura-portoes .servico-header {
+    background-image: url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1920&q=90');
+}
+
+.textura-grafiato .servico-header {
+    background-image: url('https://images.unsplash.com/photo-1582407947304-fd86f028f716?w=1920&q=90');
+}
+
+.impermeabilizacao .servico-header {
+    background-image: url('https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=1920&q=90');
+}
+
+.pintura-altura .servico-header {
+    background-image: url('https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=1920&q=90');
+}
+
+.servico-content {
+    padding: 100px 0;
+    background: var(--white);
+}
+
+.servico-section {
+    margin-bottom: 80px;
+}
+
+.servico-section h2 {
+    color: var(--blue-premium);
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 30px;
+    text-align: center;
+    letter-spacing: -1px;
+}
+
+.servico-section p {
+    color: var(--text-muted);
+    line-height: 1.8;
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+
+.servico-section strong {
+    color: var(--text-dark);
+    font-weight: 600;
+}
+
+.materiais-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.material-item {
+    background: var(--white);
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: var(--shadow-md);
+    border-left: 4px solid var(--gold-premium);
+    transition: var(--transition);
+}
+
+.material-item:hover {
+    transform: translateX(8px);
+    box-shadow: var(--shadow-lg);
+}
+
+.material-item h3 {
+    color: var(--blue-premium);
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.material-item p {
+    color: var(--text-muted);
+    line-height: 1.7;
+    margin: 0;
+}
+
+.beneficios-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.beneficio-card {
+    background: var(--white);
+    padding: 35px;
+    border-radius: 16px;
+    box-shadow: var(--shadow-md);
+    border: 1px solid var(--border-light);
+    transition: var(--transition);
+}
+
+.beneficio-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--gold-premium);
+}
+
+.beneficio-card h3 {
+    color: var(--blue-premium);
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.beneficio-card p {
+    color: var(--text-muted);
+    line-height: 1.7;
+    margin: 0;
+}
+
+.processo-steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.processo-step {
+    background: var(--white);
+    padding: 35px;
+    border-radius: 16px;
+    box-shadow: var(--shadow-md);
+    border-left: 4px solid var(--gold-premium);
+    transition: var(--transition);
+}
+
+.processo-step:hover {
+    transform: translateX(8px);
+    box-shadow: var(--shadow-lg);
+}
+
+.processo-step h3 {
+    color: var(--blue-premium);
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.processo-step p {
+    color: var(--text-muted);
+    line-height: 1.7;
+    margin: 0;
+}
+
+.cta-section {
+    background: linear-gradient(135deg, var(--blue-light), var(--gold-light));
+    padding: 80px;
+    border-radius: 24px;
+    text-align: center;
+    border: 2px solid var(--gold-premium);
+    margin-top: 80px;
+    position: relative;
+    overflow: hidden;
+}
+
+.cta-section::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(167, 145, 73, 0.1) 0%, transparent 70%);
+    animation: rotate 20s linear infinite;
+}
+
+@keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.cta-section > * {
+    position: relative;
+    z-index: 1;
+}
+
+.cta-section h2 {
+    color: var(--blue-premium);
+    font-size: 3rem;
+    font-weight: 900;
+    margin-bottom: 25px;
+    letter-spacing: -1px;
+}
+
+.cta-section p {
+    color: var(--text-dark);
+    font-size: 1.3rem;
+    margin-bottom: 40px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* FAQ Animado */
+.faq-section {
+    margin-top: 80px;
+}
+
+.faq-item {
+    background: var(--white);
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--border-light);
+    margin-bottom: 20px;
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+.faq-item:hover {
+    box-shadow: var(--shadow-md);
+    border-color: var(--gold-premium);
+}
+
+.faq-question {
+    color: var(--blue-premium);
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.faq-answer {
+    color: var(--text-muted);
+    line-height: 1.7;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+}
+
+.faq-item.active .faq-answer {
+    max-height: 500px;
+    margin-top: 15px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .servico-header {
+        height: 50vh;
+        min-height: 400px;
+    }
+    
+    .servico-section h2 {
+        font-size: 2rem;
+    }
+    
+    .materiais-grid,
+    .beneficios-grid,
+    .processo-steps {
+        grid-template-columns: 1fr;
+    }
+    
+    .cta-section {
+        padding: 50px 30px;
+    }
+    
+    .cta-section h2 {
+        font-size: 2rem;
+    }
+}

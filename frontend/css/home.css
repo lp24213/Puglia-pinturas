@@ -1,0 +1,485 @@
+/* ============================================
+   HOME PAGE - PREMIUM DESIGN
+   ============================================ */
+
+main {
+    margin-top: 90px;
+}
+
+/* Hero Full-Screen */
+.hero {
+    position: relative;
+    width: 100%;
+    height: 90vh;
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, rgba(0, 27, 58, 0.85), rgba(0, 27, 58, 0.7)),
+                url('https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=1920&q=90') center/cover;
+    background-attachment: fixed;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.3) 100%);
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: var(--white);
+    max-width: 900px;
+    padding: 0 24px;
+    animation: fadeInUp 0.8s ease-out;
+}
+
+.hero-content h1 {
+    font-size: 4.5rem;
+    font-weight: 900;
+    margin-bottom: 25px;
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    letter-spacing: -2px;
+    line-height: 1.1;
+}
+
+.hero-content .destaque {
+    color: var(--gold-premium);
+    display: block;
+    font-size: 1.2em;
+    margin-top: 10px;
+}
+
+.hero-content p {
+    font-size: 1.4rem;
+    margin-bottom: 40px;
+    opacity: 0.95;
+    line-height: 1.6;
+    font-weight: 400;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Seção: Por que escolher a Puglia */
+.why-puglia {
+    padding: 100px 0;
+    background: var(--white);
+}
+
+.why-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    margin-top: 60px;
+}
+
+.why-card {
+    background: var(--white);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: var(--shadow-md);
+    border: 1px solid var(--border-light);
+    text-align: center;
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+}
+
+.why-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--blue-premium), var(--gold-premium));
+    transform: scaleX(0);
+    transition: var(--transition);
+}
+
+.why-card:hover::before {
+    transform: scaleX(1);
+}
+
+.why-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-lg);
+}
+
+.why-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--gold-light);
+    border-radius: 20px;
+    color: var(--gold-premium);
+    font-size: 2.5rem;
+}
+
+.why-card h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--blue-premium);
+    margin-bottom: 15px;
+}
+
+.why-card p {
+    color: var(--text-muted);
+    line-height: 1.7;
+    font-size: 1rem;
+}
+
+/* Processo Puglia Premium */
+.processo-puglia {
+    padding: 100px 0;
+    background: linear-gradient(135deg, rgba(0, 27, 58, 0.03), rgba(167, 145, 73, 0.03));
+    position: relative;
+}
+
+.processo-puglia::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="grid" width="100" height="100" patternUnits="userSpaceOnUse"><path d="M 100 0 L 0 0 0 100" fill="none" stroke="rgba(0,27,58,0.03)" stroke-width="1"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+    opacity: 0.5;
+}
+
+.processo-puglia > * {
+    position: relative;
+    z-index: 1;
+}
+
+.processo-destaque {
+    background: var(--white);
+    padding: 60px;
+    border-radius: 24px;
+    text-align: center;
+    box-shadow: var(--shadow-lg);
+    margin-bottom: 60px;
+    border: 2px solid var(--gold-premium);
+}
+
+.processo-destaque strong {
+    color: var(--gold-premium);
+    font-size: 2.5rem;
+    font-weight: 900;
+    display: block;
+    margin-bottom: 20px;
+}
+
+.processo-destaque p {
+    color: var(--text-dark);
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+.processo-steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.processo-step {
+    background: var(--white);
+    padding: 35px;
+    border-radius: 16px;
+    box-shadow: var(--shadow-md);
+    border-left: 4px solid var(--gold-premium);
+    transition: var(--transition);
+}
+
+.processo-step:hover {
+    transform: translateX(8px);
+    box-shadow: var(--shadow-lg);
+}
+
+.processo-step h3 {
+    color: var(--blue-premium);
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.processo-step p {
+    color: var(--text-muted);
+    line-height: 1.7;
+    margin: 0;
+}
+
+/* Marcas Premium */
+.marcas-section {
+    padding: 100px 0;
+    background: var(--white);
+}
+
+.marcas-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 40px;
+    margin-top: 60px;
+}
+
+.marca-item {
+    background: var(--white);
+    padding: 40px 30px;
+    border-radius: 16px;
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--border-light);
+    text-align: center;
+    transition: var(--transition);
+}
+
+.marca-item:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+    border-color: var(--gold-premium);
+}
+
+.marca-item h3 {
+    color: var(--blue-premium);
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-top: 20px;
+}
+
+/* Comparação Puglia */
+.comparacao-section {
+    padding: 100px 0;
+    background: var(--white);
+}
+
+.comparacao-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 40px;
+    margin-top: 60px;
+}
+
+.comparacao-card {
+    background: var(--white);
+    padding: 50px;
+    border-radius: 20px;
+    box-shadow: var(--shadow-md);
+    border: 2px solid var(--border-light);
+    position: relative;
+    transition: var(--transition);
+}
+
+.comparacao-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+.comparacao-card.puglia {
+    border-color: var(--gold-premium);
+    background: linear-gradient(135deg, var(--gold-light), var(--blue-light));
+}
+
+.comparacao-card h3 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: var(--blue-premium);
+    font-weight: 800;
+}
+
+.comparacao-card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.comparacao-card li {
+    padding: 15px 0;
+    border-bottom: 1px solid var(--border-light);
+    color: var(--text-dark);
+    position: relative;
+    padding-left: 35px;
+    font-size: 1.05rem;
+    line-height: 1.6;
+}
+
+.comparacao-card li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--gold-premium);
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+
+.comparacao-card.concorrentes li::before {
+    content: '✗';
+    color: #dc3545;
+}
+
+/* Depoimentos */
+.depoimentos-section {
+    padding: 100px 0;
+    background: var(--white);
+}
+
+.depoimentos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 40px;
+    margin-top: 60px;
+}
+
+.depoimento-card {
+    background: var(--white);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: var(--shadow-md);
+    border: 1px solid var(--border-light);
+    position: relative;
+    transition: var(--transition);
+}
+
+.depoimento-card::before {
+    content: '"';
+    position: absolute;
+    top: -10px;
+    left: 20px;
+    font-size: 6rem;
+    color: var(--gold-premium);
+    opacity: 0.2;
+    font-family: serif;
+    line-height: 1;
+}
+
+.depoimento-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+.depoimento-texto {
+    font-style: italic;
+    color: var(--text-dark);
+    line-height: 1.8;
+    margin-bottom: 25px;
+    font-size: 1.05rem;
+    position: relative;
+    z-index: 1;
+}
+
+.depoimento-autor {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.depoimento-autor strong {
+    color: var(--blue-premium);
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.depoimento-rating {
+    color: var(--gold-premium);
+    font-size: 1.3rem;
+    margin-top: 15px;
+}
+
+/* Services Preview */
+.services-preview {
+    padding: 100px 0;
+    background: var(--white);
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 40px;
+    margin-top: 60px;
+}
+
+.service-card {
+    background: var(--white);
+    padding: 45px;
+    border-radius: 20px;
+    box-shadow: var(--shadow-md);
+    border: 1px solid var(--border-light);
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+}
+
+.service-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--blue-premium), var(--gold-premium));
+    transform: scaleX(0);
+    transition: var(--transition);
+}
+
+.service-card:hover::before {
+    transform: scaleX(1);
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-lg);
+}
+
+.service-card h3 {
+    color: var(--blue-premium);
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.service-card p {
+    color: var(--text-muted);
+    line-height: 1.8;
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+
+.service-card strong {
+    color: var(--text-dark);
+    font-weight: 600;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero {
+        height: 70vh;
+        min-height: 500px;
+    }
+    
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+    
+    .hero-content p {
+        font-size: 1.1rem;
+    }
+    
+    .why-grid,
+    .depoimentos-grid,
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+}

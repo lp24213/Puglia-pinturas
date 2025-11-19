@@ -1,0 +1,71 @@
+/* Página Lojas Parceiras - Premium */
+.lojas-section {
+    padding: 100px 0;
+    background: var(--white);
+}
+
+.lojas-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 40px;
+    margin-top: 60px;
+}
+
+.loja-card {
+    background: var(--white);
+    padding: 45px;
+    border-radius: 20px;
+    box-shadow: var(--shadow-md);
+    border: 1px solid var(--border-light);
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+}
+
+.loja-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--blue-premium), var(--gold-premium));
+    transform: scaleX(0);
+    transition: var(--transition);
+}
+
+.loja-card:hover::before {
+    transform: scaleX(1);
+}
+
+.loja-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--gold-premium);
+}
+
+.loja-card h3 {
+    color: var(--blue-premium);
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.loja-card p {
+    color: var(--text-muted);
+    line-height: 1.7;
+    margin-bottom: 15px;
+    font-size: 1rem;
+}
+
+.loja-card strong {
+    color: var(--text-dark);
+    font-weight: 600;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .lojas-grid {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,0 +1,78 @@
+/* Página Orçamento Premium */
+.orcamento-section {
+    padding: 100px 0;
+    background: var(--white);
+}
+
+.orcamento-form {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.orcamento-form h2 {
+    color: var(--blue-premium);
+    font-size: 2rem;
+    margin-bottom: 30px;
+    text-align: center;
+    font-weight: 800;
+}
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: var(--blue-premium);
+    font-size: 1rem;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 15px;
+    border: 2px solid var(--border-light);
+    border-radius: 12px;
+    font-size: 1rem;
+    transition: var(--transition);
+    background: var(--white);
+    color: var(--text-dark);
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: var(--blue-premium);
+    box-shadow: 0 0 0 3px rgba(0, 27, 58, 0.1);
+}
+
+.form-group input::placeholder {
+    color: var(--text-muted);
+}
+
+.page-header {
+    padding: 120px 0 80px;
+    text-align: center;
+    background: linear-gradient(135deg, rgba(0, 27, 58, 0.1), rgba(167, 145, 73, 0.1)),
+                url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1920&q=90') center/cover;
+    background-attachment: fixed;
+    position: relative;
+}
+
+.page-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.85);
+    z-index: 0;
+}
+
+.page-header > * {
+    position: relative;
+    z-index: 1;
+}
