@@ -10,6 +10,7 @@ class PugliaApp {
         this.setupNavigation();
         this.setupDynamicButtons();
         this.setupHeaderScroll();
+        this.setupMobileMenu();
         this.loadPage('home');
     }
 
@@ -28,6 +29,35 @@ class PugliaApp {
             
             lastScroll = currentScroll;
         });
+    }
+
+    setupMobileMenu() {
+        const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+        const mobileNav = document.getElementById('mobileNav');
+        
+        if (mobileMenuToggle && mobileNav) {
+            mobileMenuToggle.addEventListener('click', () => {
+                mobileMenuToggle.classList.toggle('active');
+                mobileNav.classList.toggle('active');
+            });
+
+            // Fechar menu ao clicar em um link
+            const mobileLinks = mobileNav.querySelectorAll('.nav-link');
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenuToggle.classList.remove('active');
+                    mobileNav.classList.remove('active');
+                });
+            });
+
+            // Fechar menu ao clicar fora
+            document.addEventListener('click', (e) => {
+                if (!mobileNav.contains(e.target) && !mobileMenuToggle.contains(e.target)) {
+                    mobileMenuToggle.classList.remove('active');
+                    mobileNav.classList.remove('active');
+                }
+            });
+        }
     }
 
     setupDynamicButtons() {
